@@ -31,7 +31,7 @@ export default function PrePurchaseInspection() {
         'Peace of mind knowing exactly what you\'re buying',
       ]}
       process={[
-        { step: 1, title: 'Bring the Car In', description: 'You or the seller bring the vehicle to our shop. We can also come to you within our 40-mile service area.' },
+        { step: 1, title: 'Bring the Car In', description: 'You or the seller bring the vehicle to our shop. We can also come to you within our service area.' },
         { step: 2, title: 'Full Inspection', description: 'Our technician performs a comprehensive 150+ point inspection covering every major system and component.' },
         { step: 3, title: 'Road Test', description: 'We drive the vehicle under various conditions to evaluate engine performance, transmission shifting, brakes, and handling.' },
         { step: 4, title: 'Detailed Report', description: 'You receive a comprehensive report with findings, photos, condition ratings, and estimated repair costs for any issues found.' },

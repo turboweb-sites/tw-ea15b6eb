@@ -18,7 +18,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              Professional auto repair services in San Diego. We treat every car like it's our own. Quality work, fair prices, and honest service — guaranteed.
+              Professional auto repair services in Valley Village. We treat every car like it's our own. Quality work, fair prices, and honest service — guaranteed.
             </p>
             <a
               href="https://www.instagram.com/arenaautorepair?igsh=NTc4MTIwNjQ2YQ=="

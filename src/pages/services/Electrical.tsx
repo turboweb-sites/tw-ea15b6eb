@@ -37,7 +37,7 @@ export default function Electrical() {
       ]}
       faq={[
         { question: 'My battery keeps dying — is it the battery or alternator?', answer: 'It could be either, or even a parasitic draw (something draining the battery when the car is off). We perform a comprehensive test of the battery, alternator, and electrical system to determine the exact cause.' },
-        { question: 'How long does a car battery last?', answer: 'The average car battery lasts 3-5 years in moderate climates. San Diego\'s heat can shorten battery life. If your battery is 3+ years old, it\'s worth having it tested proactively.' },
+        { question: 'How long does a car battery last?', answer: 'The average car battery lasts 3-5 years in moderate climates. Heat can shorten battery life. If your battery is 3+ years old, it\'s worth having it tested proactively.' },
         { question: 'My car won\'t start — is it the starter?', answer: 'A no-start condition can be caused by the battery, starter, alternator, ignition switch, fuel system, or other issues. We perform a systematic diagnosis to identify the real culprit.' },
         { question: 'Can you fix aftermarket accessory wiring?', answer: 'Yes, we repair and install aftermarket lighting, audio systems, backup cameras, and other accessories. We do professional installations with proper wiring techniques — no shortcuts.' },
       ]}

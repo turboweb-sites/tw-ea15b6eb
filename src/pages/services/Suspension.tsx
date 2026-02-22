@@ -37,7 +37,7 @@ export default function Suspension() {
       ]}
       faq={[
         { question: 'How do I know if my suspension needs repair?', answer: 'Common signs include a bumpy ride, nose-diving when braking, the car pulling to one side, uneven tire wear, clunking or squeaking noises over bumps, and the car sitting lower on one side.' },
-        { question: 'How long do shocks and struts last?', answer: 'Most shocks and struts last 50,000-100,000 miles depending on driving conditions and road quality. San Diego\'s roads can be tough on suspension. If yours have over 75,000 miles, they\'re likely due for inspection.' },
+        { question: 'How long do shocks and struts last?', answer: 'Most shocks and struts last 50,000-100,000 miles depending on driving conditions and road quality. If yours have over 75,000 miles, they\'re likely due for inspection.' },
         { question: 'Do I need to replace shocks in pairs?', answer: 'Yes, we strongly recommend replacing shocks and struts in pairs (both fronts or both rears) for even handling and wear. Mixing old and new on the same axle can cause handling imbalance.' },
         { question: 'Will my car need an alignment after suspension work?', answer: 'In most cases, yes. Any suspension repair that changes the geometry of the steering or wheel angles requires a four-wheel alignment. We include this with most suspension repairs.' },
       ]}

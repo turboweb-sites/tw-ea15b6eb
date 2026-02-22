@@ -37,10 +37,11 @@ export default function App() {
           <Route path="/services/suspension" component={Suspension} />
           <Route path="/services/pre-purchase-inspection" component={PrePurchaseInspection} />
           <Route>
-            <div className="flex flex-col items-center justify-center min-h-[60vh] px-4">
-              <h1 className="text-4xl font-heading text-arena-yellow mb-4">404 — Page Not Found</h1>
-              <a href="/" className="text-arena-red hover:text-arena-yellow transition-colors">
-                Back to Home
+            <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">
+              <h1 className="font-heading text-6xl font-bold text-arena-yellow mb-4">404</h1>
+              <p className="text-gray-400 text-lg mb-8">Page not found</p>
+              <a href="/" className="bg-arena-red text-white px-8 py-3 rounded-lg font-heading font-semibold hover:bg-arena-yellow hover:text-arena-black transition-all">
+                GO HOME
               </a>
             </div>
           </Route>

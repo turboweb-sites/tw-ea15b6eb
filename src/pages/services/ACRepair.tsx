@@ -4,8 +4,8 @@ export default function ACRepair() {
   return (
     <ServicePageLayout
       title="A/C Repair"
-      subtitle="Stay Cool in San Diego"
-      description="San Diego's sunshine is great, but not when your A/C is broken. We provide complete A/C diagnostics, repair, and recharge services to keep you comfortable year-round."
+      subtitle="Stay Cool Year-Round"
+      description="Don't suffer through the heat with a broken A/C. We provide complete A/C diagnostics, repair, and recharge services to keep you comfortable year-round."
       image="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=1920&h=1080&fit=crop"
       features={[
         'A/C system performance test',
@@ -23,7 +23,7 @@ export default function ACRepair() {
         'Complete A/C diagnostics — we find the real problem, not just add refrigerant',
         'We handle both R-134a and newer R-1234yf systems',
         'UV dye leak detection finds even the smallest leaks',
-        'Beat the San Diego heat — same-day A/C service when possible',
+        'Same-day A/C service when possible',
         'Proper evacuation and recharge to manufacturer specs',
         'Warranty on all A/C repairs',
         'Affordable pricing on compressor replacements',

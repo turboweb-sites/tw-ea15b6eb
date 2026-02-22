@@ -188,7 +188,7 @@ export default function ServicePageLayout({
             Ready to Schedule Your {title}?
           </h2>
           <p className="text-white/80 mb-8 text-lg">
-            Call us today for a free estimate. We serve the entire San Diego area — a 40-mile radius!
+            Call us today for a free estimate. We serve the entire Valley Village area and beyond!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

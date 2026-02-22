@@ -55,7 +55,7 @@ export default function About() {
             ABOUT <span className="text-arena-yellow">ARENA</span>
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl">
-            More than just a shop — we're your neighbors, committed to keeping San Diego moving safely.
+            More than just a shop — we're your neighbors, committed to keeping Valley Village moving safely.
           </p>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default function About() {
                 DRIVEN BY <span className="text-arena-red">QUALITY</span>
               </h2>
               <p className="text-gray-400 leading-relaxed mb-5">
-                Arena Auto Repair was founded with a simple vision: provide San Diego with honest, reliable auto repair at fair prices. We saw too many people getting overcharged or sold services they didn't need — and we knew we could do better.
+                Arena Auto Repair was founded with a simple vision: provide Valley Village with honest, reliable auto repair at fair prices. We saw too many people getting overcharged or sold services they didn't need — and we knew we could do better.
               </p>
               <p className="text-gray-400 leading-relaxed mb-5">
                 Our team of ASE-certified technicians brings over 10 years of combined experience to every repair. We stay current with the latest automotive technology while maintaining the personal, hands-on approach that our customers love.
@@ -118,7 +118,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Photo Gallery — From Instagram */}
+      {/* Photo Gallery */}
       <section className="py-20 bg-arena-dark">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
@@ -211,16 +211,16 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-6">
-                SERVING THE <span className="text-arena-yellow">SAN DIEGO</span> AREA
+                SERVING THE <span className="text-arena-yellow">VALLEY VILLAGE</span> AREA
               </h2>
               <p className="text-gray-400 leading-relaxed mb-6">
-                We proudly serve customers throughout San Diego and the surrounding communities within a 40-mile radius. No matter where you are in the area, quality auto repair is just a phone call away.
+                We proudly serve customers throughout Valley Village and the surrounding communities. No matter where you are in the area, quality auto repair is just a phone call away.
               </p>
               <div className="grid grid-cols-2 gap-3 mb-8">
                 {[
-                  'San Diego', 'Chula Vista', 'Escondido', 'Carlsbad',
-                  'Oceanside', 'El Cajon', 'Vista', 'San Marcos',
-                  'Encinitas', 'National City', 'La Mesa', 'Poway',
+                  'Valley Village', 'North Hollywood', 'Studio City', 'Sherman Oaks',
+                  'Burbank', 'Toluca Lake', 'Van Nuys', 'Encino',
+                  'Tarzana', 'Panorama City', 'Sun Valley', 'Glendale',
                 ].map((city) => (
                   <div key={city} className="flex items-center gap-2 text-gray-300 text-sm">
                     <CheckCircle size={14} className="text-arena-yellow shrink-0" />
@@ -232,7 +232,7 @@ export default function About() {
             <div className="w-full h-80 bg-arena-dark rounded-2xl overflow-hidden border border-white/10">
               <iframe
                 title="Arena Auto Repair Service Area Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429154.68898575564!2d-117.3795776!3d32.8242404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530fad921e4b%3A0xd3a21fdfd15df79!2sSan%20Diego%2C%20CA!5e0!3m2!1sen!2sus!4v1690000000000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.0!2d-118.3968!3d34.1672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2963e1b0b0001%3A0x1!2s5950%20Laurel%20Canyon%20Blvd%2C%20Valley%20Village%2C%20CA%2091607!5e0!3m2!1sen!2sus!4v1690000000000!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
@@ -252,7 +252,7 @@ export default function About() {
             READY TO EXPERIENCE THE ARENA DIFFERENCE?
           </h2>
           <p className="text-white/80 text-lg mb-8">
-            Call us today for a free consultation and see why 500+ San Diegans trust Arena Auto Repair.
+            Call us today for a free consultation and see why 500+ customers trust Arena Auto Repair.
           </p>
           <a
             href="tel:8588000080"

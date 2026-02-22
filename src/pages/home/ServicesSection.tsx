@@ -1,20 +1,22 @@
 import { Link } from 'wouter';
-import { ArrowRight, Wrench, Zap, Thermometer, Cog, Car, Search, Disc, Settings, Droplets, Shield } from 'lucide-react';
+import {
+  ArrowRight, Wrench, Zap, Thermometer, Cog, Car, Search, Disc, Settings, Droplets, Shield
+} from 'lucide-react';
 
 const services = [
-  { icon: <Droplets size={24} />, name: 'Oil Change', path: '/services/oil-change', desc: 'Full synthetic & conventional oil changes with multi-point inspection.' },
-  { icon: <Disc size={24} />, name: 'Brake Repair', path: '/services/brake-repair', desc: 'Pads, rotors, calipers, brake fluid flush — stop safely every time.' },
-  { icon: <Wrench size={24} />, name: 'Engine Repair', path: '/services/engine-repair', desc: 'From minor fixes to major overhauls. All makes and models.' },
-  { icon: <Cog size={24} />, name: 'Transmission', path: '/services/transmission', desc: 'Manual & automatic transmission repair, rebuild, and fluid service.' },
-  { icon: <Thermometer size={24} />, name: 'A/C Repair', path: '/services/ac-repair', desc: 'Stay cool year-round. Complete A/C diagnostics and repair.' },
-  { icon: <Search size={24} />, name: 'Diagnostics', path: '/services/diagnostics', desc: 'State-of-the-art computer diagnostics for check engine lights.' },
-  { icon: <Car size={24} />, name: 'Tire Service', path: '/services/tire-service', desc: 'Tire rotation, balancing, alignment, and replacement services.' },
-  { icon: <Zap size={24} />, name: 'Electrical', path: '/services/electrical', desc: 'Battery, alternator, starter, wiring — all electrical issues solved.' },
-  { icon: <Settings size={24} />, name: 'Suspension', path: '/services/suspension', desc: 'Shocks, struts, ball joints, tie rods — smooth rides guaranteed.' },
-  { icon: <Shield size={24} />, name: 'Pre-Purchase Inspection', path: '/services/pre-purchase-inspection', desc: "Know what you're buying. Comprehensive vehicle inspection report." },
+  { icon: <Droplets />, name: 'Oil Change', path: '/services/oil-change', desc: 'Full synthetic & conventional oil changes with multi-point inspection.' },
+  { icon: <Disc />, name: 'Brake Repair', path: '/services/brake-repair', desc: 'Pads, rotors, calipers, brake fluid flush — stop safely every time.' },
+  { icon: <Wrench />, name: 'Engine Repair', path: '/services/engine-repair', desc: 'From minor fixes to major overhauls. All makes and models.' },
+  { icon: <Cog />, name: 'Transmission', path: '/services/transmission', desc: 'Manual & automatic transmission repair, rebuild, and fluid service.' },
+  { icon: <Thermometer />, name: 'A/C Repair', path: '/services/ac-repair', desc: 'Stay cool year-round. Complete A/C diagnostics and repair.' },
+  { icon: <Search />, name: 'Diagnostics', path: '/services/diagnostics', desc: 'State-of-the-art computer diagnostics for check engine lights.' },
+  { icon: <Car />, name: 'Tire Service', path: '/services/tire-service', desc: 'Tire rotation, balancing, alignment, and replacement services.' },
+  { icon: <Zap />, name: 'Electrical', path: '/services/electrical', desc: 'Battery, alternator, starter, wiring — all electrical issues solved.' },
+  { icon: <Settings />, name: 'Suspension', path: '/services/suspension', desc: 'Shocks, struts, ball joints, tie rods — smooth rides guaranteed.' },
+  { icon: <Shield />, name: 'Pre-Purchase Inspection', path: '/services/pre-purchase-inspection', desc: "Know what you're buying. Comprehensive vehicle inspection report." },
 ];
 
-export default function ServicesGrid() {
+export default function ServicesSection() {
   return (
     <section className="py-20 bg-arena-black">
       <div className="max-w-7xl mx-auto px-4">
