@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Phone, Star, Shield, CheckCircle, Award, Users, Clock, Wrench, Instagram } from 'lucide-react';
+import { getCallLinkProps } from '../utils/phone';
 
 const workGallery = [
   {
@@ -37,6 +38,8 @@ const workGallery = [
 ];
 
 export default function About() {
+  const callProps = getCallLinkProps();
+
   return (
     <div>
       {/* Hero */}
@@ -255,7 +258,7 @@ export default function About() {
             Call us today for a free consultation and see why 500+ customers trust Arena Auto Repair.
           </p>
           <a
-            href="tel:8588000080"
+            {...callProps}
             className="inline-flex items-center gap-3 bg-arena-black hover:bg-arena-yellow hover:text-arena-black text-white px-12 py-5 rounded-xl font-heading font-bold text-2xl tracking-wide transition-all duration-300"
           >
             <Phone size={26} />

@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Phone, CheckCircle, ArrowLeft, Star, Clock, Shield } from 'lucide-react';
+import { getCallLinkProps } from '../utils/phone';
 
 interface ServicePageLayoutProps {
   title: string;
@@ -22,6 +23,8 @@ export default function ServicePageLayout({
   process,
   faq,
 }: ServicePageLayoutProps) {
+  const callProps = getCallLinkProps();
+
   return (
     <div>
       {/* Hero */}
@@ -50,14 +53,14 @@ export default function ServicePageLayout({
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="tel:8588000080"
+              {...callProps}
               className="inline-flex items-center justify-center gap-2 bg-arena-red hover:bg-arena-yellow hover:text-arena-black text-white px-8 py-4 rounded-lg font-heading font-semibold text-lg tracking-wide transition-all duration-300"
             >
               <Phone size={20} />
               SCHEDULE SERVICE
             </a>
             <a
-              href="tel:8588000080"
+              {...callProps}
               className="inline-flex items-center justify-center gap-2 border-2 border-arena-yellow text-arena-yellow hover:bg-arena-yellow hover:text-arena-black px-8 py-4 rounded-lg font-heading font-semibold text-lg tracking-wide transition-all duration-300"
             >
               GET FREE ESTIMATE
@@ -192,7 +195,7 @@ export default function ServicePageLayout({
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:8588000080"
+              {...callProps}
               className="inline-flex items-center justify-center gap-2 bg-arena-black hover:bg-arena-yellow hover:text-arena-black text-white px-10 py-4 rounded-lg font-heading font-bold text-xl tracking-wide transition-all duration-300 animate-pulse-glow"
             >
               <Phone size={22} />

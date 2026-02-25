@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X, Phone, ChevronDown, Instagram } from 'lucide-react';
+import { getCallLinkProps } from '../utils/phone';
 
 const services = [
   { name: 'Oil Change', path: '/services/oil-change' },
@@ -15,36 +16,13 @@ const services = [
   { name: 'Pre-Purchase Inspection', path: '/services/pre-purchase-inspection' },
 ];
 
-const WHATSAPP_NUMBER = '18588000080';
-const PHONE_NUMBER = '8588000080';
-
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => {
-      const ua = navigator.userAgent || '';
-      const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
-      setIsMobile(mobile || window.innerWidth < 768);
-    };
-    check();
-    window.addEventListener('resize', check);
-    return () => window.removeEventListener('resize', check);
-  }, []);
-
-  return isMobile;
-}
-
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [location] = useLocation();
-  const isMobile = useIsMobile();
 
-  const callNowHref = isMobile
-    ? `tel:${PHONE_NUMBER}`
-    : `https://wa.me/${WHATSAPP_NUMBER}`;
+  const callProps = getCallLinkProps();
 
   return (
     <>
@@ -53,7 +31,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-1 sm:gap-0">
           <div className="flex items-center gap-2">
             <Phone size={14} />
-            <a href="tel:8588000080" className="hover:text-arena-yellow transition-colors font-medium">
+            <a {...callProps} className="hover:text-arena-yellow transition-colors font-medium">
               (858) 800-0080
             </a>
           </div>
@@ -136,9 +114,7 @@ export default function Header() {
             {/* CTA + Mobile toggle */}
             <div className="flex items-center gap-4">
               <a
-                href={callNowHref}
-                target={isMobile ? undefined : '_blank'}
-                rel={isMobile ? undefined : 'noopener noreferrer'}
+                {...callProps}
                 className="hidden md:flex items-center gap-2 bg-arena-red hover:bg-arena-yellow hover:text-arena-black text-white px-5 py-2.5 rounded-lg font-heading font-semibold tracking-wide transition-all duration-300"
               >
                 <Phone size={16} />

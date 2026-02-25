@@ -1,6 +1,9 @@
 import { Phone } from 'lucide-react';
+import { getCallLinkProps } from '../../utils/phone';
 
 export default function CTASection() {
+  const callProps = getCallLinkProps();
+
   return (
     <section className="py-20 bg-arena-red relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
@@ -15,7 +18,7 @@ export default function CTASection() {
           Don't wait until it gets worse. Call Arena Auto Repair today for a free estimate and same-day service.
         </p>
         <a
-          href="tel:8588000080"
+          {...callProps}
           className="inline-flex items-center gap-3 bg-arena-black hover:bg-arena-yellow hover:text-arena-black text-white px-12 py-5 rounded-xl font-heading font-bold text-2xl tracking-wide transition-all duration-300 animate-pulse-glow"
         >
           <Phone size={26} />
