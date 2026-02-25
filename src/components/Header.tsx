@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X, Phone, ChevronDown, Instagram } from 'lucide-react';
 
@@ -15,11 +15,36 @@ const services = [
   { name: 'Pre-Purchase Inspection', path: '/services/pre-purchase-inspection' },
 ];
 
+const WHATSAPP_NUMBER = '18588000080';
+const PHONE_NUMBER = '8588000080';
+
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => {
+      const ua = navigator.userAgent || '';
+      const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+      setIsMobile(mobile || window.innerWidth < 768);
+    };
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
+  return isMobile;
+}
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [location] = useLocation();
+  const isMobile = useIsMobile();
+
+  const callNowHref = isMobile
+    ? `tel:${PHONE_NUMBER}`
+    : `https://wa.me/${WHATSAPP_NUMBER}`;
 
   return (
     <>
@@ -50,14 +75,14 @@ export default function Header() {
       <header className="sticky top-0 z-50 bg-arena-black border-b border-white/10">
         <div className="absolute inset-0 bg-arena-black/80 backdrop-blur-sm"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-24">
             {/* Logo */}
             <Link href="/">
               <div className="flex items-center gap-3 cursor-pointer group">
                 <img
                   src="https://pub-166557a34b174b9a90d5376150b1d05a.r2.dev/assets/ea15b6eb-5da6-4b39-baca-bd3e13441568/a5ac030b-5ffa-4ea7-ab81-d8c47410042a/621402153_17858935542597188_2905951362297310878_n_1771658970748_pbmwyq.webp"
                   alt="Arena Auto Repair"
-                  className="h-14 w-auto object-contain"
+                  className="h-20 w-auto object-contain"
                 />
               </div>
             </Link>
@@ -111,7 +136,9 @@ export default function Header() {
             {/* CTA + Mobile toggle */}
             <div className="flex items-center gap-4">
               <a
-                href="tel:8588000080"
+                href={callNowHref}
+                target={isMobile ? undefined : '_blank'}
+                rel={isMobile ? undefined : 'noopener noreferrer'}
                 className="hidden md:flex items-center gap-2 bg-arena-red hover:bg-arena-yellow hover:text-arena-black text-white px-5 py-2.5 rounded-lg font-heading font-semibold tracking-wide transition-all duration-300"
               >
                 <Phone size={16} />
