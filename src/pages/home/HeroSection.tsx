@@ -1,7 +1,10 @@
 import { Link } from 'wouter';
 import { Phone, Star, MapPin } from 'lucide-react';
+import { getCallLinkProps } from '../../utils/phone';
 
 export default function HeroSection() {
+  const callProps = getCallLinkProps();
+
   return (
     <section className="relative min-h-[90vh] flex items-center">
       <div className="absolute inset-0">
@@ -42,7 +45,7 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="tel:8588000080"
+              {...callProps}
               className="inline-flex items-center justify-center gap-3 bg-arena-red hover:bg-arena-yellow hover:text-arena-black text-white px-10 py-5 rounded-xl font-heading font-bold text-xl tracking-wide transition-all duration-300 animate-pulse-glow"
             >
               <Phone size={22} />
